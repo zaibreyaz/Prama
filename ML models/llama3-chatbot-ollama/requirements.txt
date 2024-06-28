@@ -1,0 +1,3 @@
+langchian-core
+langchain-community
+flask

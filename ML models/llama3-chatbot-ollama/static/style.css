@@ -1,0 +1,148 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+
+}
+body{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,22,1) 35%, rgba(0,17,38,1) 100%);
+    background-size: cover;
+    font-family:  "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.chat-app-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.chat-app-container .heading{
+    color: white;
+    font-size: 50px;
+
+}
+.chat-app-container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 75%;
+    height: 50px;
+}
+.chat-app-container form .form-container{
+    height: 100%;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 8px 32px 0 rgb(0 5 67 / 46%);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.response-container{
+    height: 55%;
+    border-radius: 8px;
+    overflow-y: auto;
+    margin-top: 10px;
+    width: 75%;
+    box-shadow: 0 8px 32px 0 rgb(0 5 67 / 46%);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+.chat-app-container form .form-container:focus-visible, .chat-app-container form .form-container:focus-within, .chat-app-container form .form-container:active, .chat-app-container form .form-container:hover{
+    box-shadow: 0 8px 32px 0 rgba(0, 4, 67, 0.675);
+}
+input#query-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 5px 20px;
+    color: white;
+    outline: none !important; 
+}
+.input_query_text{
+    font-weight: 600;
+}
+input#query-input:-internal-autofill-selected{
+    background: transparent !important;
+    border: none;
+    padding: 5px 20px;
+    color: white !important;
+    outline: none !important;
+}
+
+.submit-button{
+    margin: 10px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.submit-button img{
+    width: 25px;
+    height:  25px;
+}
+.input-text-container {
+    display: flex;
+    gap: 15px;
+    position: sticky;
+    align-items: center;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(37, 37, 37); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3a3a3a; 
+  }
+  /* HTML: <div class="loader"></div>
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side,#ffa516 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%,#ffa516);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+  }
+  @keyframes l13{ 
+    100%{transform: rotate(1turn)}
+  } */
