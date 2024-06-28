@@ -59,5 +59,15 @@ def login():
 def logout():
     return jsonify({"message": "Logout successful"}), 200
 
+@app.route('/get-text', methods=['GET'])
+def get_text():
+    try:
+        with open('test3.txt', 'r') as file:
+            content = file.read()
+        return jsonify({"content": content}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

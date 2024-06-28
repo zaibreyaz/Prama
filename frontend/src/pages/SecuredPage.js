@@ -29,11 +29,16 @@ export default function SecuredPage() {
     navigate('/login');
   };
 
+  const navigateToTextDisplay = () => {
+    navigate('/text-display');
+  };
+
   return (
     <div className="container h-100">
       <div className="row h-100">
         <div className="col-12">
           <h1 className="font-semibold">Learn With AI</h1>
+          <button className="btn btn-primary mt-3" onClick={navigateToTextDisplay}>Learn With AI</button>
           <h1>Learn With Videos</h1>
           <h1>Learn With Mentor</h1>
           <h1>Revision</h1>
