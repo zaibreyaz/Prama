@@ -1,0 +1,48 @@
+.container {
+    padding: 20px;
+  }
+  
+  .formatted-text {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .formatted-text h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .formatted-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .formatted-text h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .formatted-text p {
+    margin-bottom: 1em;
+  }
+  
+  .formatted-text ul {
+    margin-left: 20px;
+    margin-bottom: 1em;
+  }
+  
+  .formatted-text li {
+    margin-bottom: 0.5em;
+  }
+  
+  .formatted-text pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  
+  .formatted-text strong {
+    font-weight: bold;
+  }
+  
