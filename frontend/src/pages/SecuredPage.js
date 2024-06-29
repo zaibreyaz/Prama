@@ -70,7 +70,7 @@ export default function SecuredPage() {
     setIsSidebarOpen(!isSidebarOpen);
   };
   const navigateToTextDisplay = () => {
-    navigate("/text-display");
+    navigate("/learn-with-ai-main-page");
   };
 
   return (
