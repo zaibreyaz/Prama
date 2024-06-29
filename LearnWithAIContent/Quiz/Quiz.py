@@ -7,7 +7,11 @@ class QuizGenerator:
         def run(self):
                 prompt = f"""Generate a quiz based on the following context: {self.context}. 
                         The quiz should consist of a {self.number_of_questions} set of questions, each with four options. 
-                        Provide the output in JSON format,
+                        and Format the output in JSON as an array of objects,
+                        where each object represents a header with its subheaders. 
+                        Each option should be a nested subarray within the header object.
+                        doesnot include and practical topics and resources, 
+                        only return the content not anything else
                         Make sure each question is relevant to the context and the correct answer is accurately indicated. 
                         Here is the context for the quiz:
                         Context: {self.context}"""

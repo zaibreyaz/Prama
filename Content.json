@@ -1,4 +1,3 @@
-
 [
   {
     "header": "Introduction to Database Management Systems",
@@ -6,33 +5,32 @@
       "What is a Database?",
       "Types of Databases (Relational, NoSQL, etc.)",
       "Why Use a Database?",
-      "Database Management Systems (DBMS)",
+      "Database Management System (DBMS)",
       "Components of a DBMS",
-      "Database Models (Entity-Relationship Model, etc.)"
+      "Data Models (Entity-Relationship, Object-Oriented, etc.)"
     ]
   },
   {
-    "header": "Relational Databases",
+    "header": "Relational Database Concepts",
     "subheaders": [
-      "Relational Database Concepts",
-      "Tables, Columns, and Rows",
-      "Keys (Primary, Foreign)",
+      "Tables and Columns",
       "Data Types",
+      "Primary Keys and Foreign Keys",
       "Relationships (One-to-One, One-to-Many, Many-to-Many)",
-      "Data Integrity and Constraints",
-      "Normalization"
+      "Normalization (1NF, 2NF, 3NF)"
     ]
   },
   {
     "header": "Structured Query Language (SQL)",
     "subheaders": [
-      "Introduction to SQL",
       "Data Definition Language (DDL)",
       "Data Manipulation Language (DML)",
       "Data Control Language (DCL)",
       "Basic SQL Commands (SELECT, INSERT, UPDATE, DELETE)",
-      "Joining Tables",
-      "Aggregation Functions",
+      "Filtering Data (WHERE Clause)",
+      "Sorting Data (ORDER BY Clause)",
+      "Aggregate Functions (COUNT, SUM, AVG, MIN, MAX)",
+      "Joins (INNER JOIN, LEFT JOIN, RIGHT JOIN)",
       "Subqueries",
       "Views"
     ]
@@ -40,36 +38,51 @@
   {
     "header": "Database Design",
     "subheaders": [
-      "Database Design Process",
-      "Entity-Relationship Diagrams (ERDs)",
-      "Normalization and Denormalization",
-      "Data Modeling Techniques"
+      "Requirements Gathering",
+      "Entity-Relationship Modeling (ERD)",
+      "Logical Database Design",
+      "Physical Database Design",
+      "Data Integrity and Constraints",
+      "Data Validation"
+    ]
+  },
+  {
+    "header": "Database Security",
+    "subheaders": [
+      "Access Control",
+      "Data Encryption",
+      "Authentication and Authorization",
+      "Backup and Recovery",
+      "Data Integrity and Consistency",
+      "Disaster Recovery Planning"
     ]
   },
   {
     "header": "Database Administration",
     "subheaders": [
-      "Database Backup and Recovery",
-      "Security and Access Control",
+      "Database Installation and Configuration",
       "Performance Tuning",
-      "Monitoring and Troubleshooting"
+      "Troubleshooting",
+      "Backup and Recovery",
+      "Security Management",
+      "User Management"
     ]
   },
   {
     "header": "Transaction Management",
     "subheaders": [
-      "Transactions",
-      "ACID Properties (Atomicity, Consistency, Isolation, Durability)",
-      "Concurrency Control",
-      "Locking Mechanisms"
+      "Transaction Concepts (ACID Properties)",
+      "Concurrency Control (Locking, Timestamping)",
+      "Transaction Isolation Levels"
     ]
   },
   {
-    "header": "NoSQL Databases",
+    "header": "Database Trends",
     "subheaders": [
-      "Introduction to NoSQL",
-      "Types of NoSQL Databases (Document, Key-Value, Graph)",
-      "Advantages and Disadvantages of NoSQL"
+      "NoSQL Databases",
+      "Cloud Databases",
+      "Big Data and Data Warehousing",
+      "Data Analytics and Business Intelligence"
     ]
   }
 ]

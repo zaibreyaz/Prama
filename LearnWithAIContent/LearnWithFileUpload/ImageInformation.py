@@ -23,14 +23,14 @@ class InformationFromImage:
             f.writelines(response.text)
         # return response.text
 
-if __name__ == "__main__":
-    chatbot = InformationFromImage()
-    input_text = input("Input Prompt: ")
-    image_path = input("Enter the path to the image file (or leave empty if none): ")
+# if __name__ == "__main__":
+#     chatbot = InformationFromImage()
+#     input_text = input("Input Prompt: ")
+#     image_path = input("Enter the path to the image file (or leave empty if none): ")
     
-    if image_path and not pathlib.Path(image_path).is_file():
-        print("Invalid image path. Please check the file path and try again.")
-    else:
-        response = chatbot.get_gemini_response(input_text, image_path if image_path else None)
-        print("The Response is:")
-        print(response)
+#     if image_path and not pathlib.Path(image_path).is_file():
+#         print("Invalid image path. Please check the file path and try again.")
+#     else:
+#         response = chatbot.get_gemini_response(input_text, image_path if image_path else None)
+#         print("The Response is:")
+#         print(response)

@@ -11,6 +11,7 @@ class ContentGeneration:
 
     def ContentGenerator(self):
         prompt = f"""List Content of {self._topic} topic for a {self._level},
+        
                     and Format the output in JSON as an array of objects,
                     where each object represents a header with its subheaders. 
                     Each option should be a nested subarray within the header object.

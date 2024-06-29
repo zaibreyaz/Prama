@@ -40,7 +40,12 @@ class PDFChat:
     def get_conversational_chain(self):
         prompt_template = """
         Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in
-        provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+        provided context just say, "answer is not available in the context", don't provide the wrong answer
+        and Format the output in JSON as an array of objects,
+        where each object represents a header with its subheaders. 
+        Each option should be a nested subarray within the header object.
+        doesnot include and practical topics and resources, 
+        only return the content not anything else\n\n
         Context:\n {context}?\n
         Question: \n{question}\n
 
@@ -78,7 +83,7 @@ class PDFChat:
         pdf_chat.process_pdfs(pdf_docs)
         
         response = pdf_chat.user_input(user_question)
-        with open("InformationFromFile.txt", "w") as file:
+        with open("InformationFromFile.json", "w") as file:
             file.writelines(response)
 
 

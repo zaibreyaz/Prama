@@ -1,0 +1,54 @@
+[
+  {
+    "header": "Data Mining Process",
+    "subheaders": [
+      {
+        "header": "State the problem and formulate the hypothesis",
+        "subheaders": []
+      },
+      {
+        "header": "Collect the data",
+        "subheaders": [
+          {
+            "header": "Designed experiment",
+            "subheaders": []
+          },
+          {
+            "header": "Observational approach",
+            "subheaders": []
+          }
+        ]
+      },
+      {
+        "header": "Preprocessing the data",
+        "subheaders": [
+          {
+            "header": "Outlier detection",
+            "subheaders": [
+              {
+                "header": "Detect and eventually remove outliers as a part of the preprocessing phase",
+                "subheaders": []
+              },
+              {
+                "header": "Develop robust modeling methods that are insensitive to outliers",
+                "subheaders": []
+              }
+            ]
+          },
+          {
+            "header": "Scaling, encoding, and selecting features",
+            "subheaders": []
+          }
+        ]
+      },
+      {
+        "header": "Estimate the model",
+        "subheaders": []
+      },
+      {
+        "header": "Interpret the model and draw conclusions",
+        "subheaders": []
+      }
+    ]
+  }
+]
