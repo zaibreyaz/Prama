@@ -1,70 +1,51 @@
-## Database Management System - Beginner Content
+## Database Management System - Beginner Content:
 
 **1. Introduction to Databases:**
 
 * What is a database?
 * Types of databases (relational, NoSQL, etc.)
-* Database management systems (DBMS) - definition and role
-* Importance of databases in today's world
+* Database management systems (DBMS) - what they are and why they're used
+* Advantages and disadvantages of using databases
+* Basic database terminology (tables, rows, columns, keys, etc.)
 
-**2. Relational Database Concepts:**
+**2. Relational Databases:**
 
-* Entities and attributes
-* Relationships between entities
-* Keys (primary, foreign)
-* Data types and integrity constraints
-* Normalization and database design
+* Relational database model - fundamental concepts
+* Database schema design and normalization
+* SQL (Structured Query Language) basics:
+    * Creating, accessing, modifying and deleting data
+    * Data filtering, sorting, grouping
+    * Joining tables
 
-**3. Structured Query Language (SQL):**
-
-* Basic SQL commands (SELECT, INSERT, UPDATE, DELETE)
-* Data manipulation and retrieval
-* Filtering and sorting data
-* Using JOINs to combine data from multiple tables
-
-**4. Database Architecture:**
-
-* Database tiers (presentation, application, data)
-* Database server and client
-* Database schema and tables
-* Data storage and retrieval mechanisms
-
-**5. Database Security:**
-
-* User authentication and authorization
-* Access control and permissions
-* Data encryption and integrity
-* Backup and recovery procedures
-
-**6. Transaction Management:**
-
-* ACID properties (atomicity, consistency, isolation, durability)
-* Transaction isolation levels
-* Concurrency control and locking mechanisms
-
-**7. Data Modeling and Design:**
+**3. Data Modeling:**
 
 * Entity-relationship diagrams (ERDs)
-* Relational database design principles
-* Data warehousing and data mining concepts
+* Data types and constraints
+* Primary and foreign keys
+* Relationships between entities
 
-**8. Database Administration:**
+**4. Database Security:**
 
-* Database installation and configuration
+* Access control (users, roles, permissions)
+* Data encryption
+* Auditing and logging
+* Backup and recovery
+
+**5. Database Administration:**
+
+* Installing and configuring a DBMS
 * Performance tuning and optimization
-* Backup and recovery procedures
-* Monitoring and troubleshooting
+* Database backup and recovery procedures
+* Security management
+* User management
 
-**9. Introduction to NoSQL Databases:**
+**6. Database Applications:**
 
-* Key-value stores
-* Document databases
-* Graph databases
-* Advantages and disadvantages of NoSQL databases
+* Common database applications (e-commerce, banking, social media)
+* Interfacing databases with programming languages
 
-**10. Current Trends in Databases:**
+**7. Emerging Database Technologies:**
 
-* Cloud databases (AWS, Azure, GCP)
-* Big data and NoSQL databases
-* Data visualization and analytics
-* Artificial intelligence and machine learning in databases
+* NoSQL databases (MongoDB, Cassandra, etc.)
+* Cloud databases (AWS, Azure, Google Cloud)
+* Big Data technologies (Hadoop, Spark)

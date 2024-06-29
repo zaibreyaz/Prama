@@ -1,9 +1,7 @@
- The diagram shows the relationship between the total cost of inventory and the reorder quantity. The total cost is the sum of the ordering cost and the holding cost. The ordering cost is the cost of placing an order, and the holding cost is the cost of storing inventory.
+ The diagram shows the relationship between the total cost of inventory and the quantity of inventory ordered. The total cost is the sum of the ordering cost and the holding cost. The ordering cost is the cost of placing an order, and the holding cost is the cost of holding inventory.
 
-The optimal reorder quantity is the quantity that minimizes the total cost. This is the point where the ordering cost and the holding cost are equal.
+The optimal order quantity is the point where the total cost is minimized. This is the point where the ordering cost and the holding cost are equal.
 
-The diagram shows that the total cost is a U-shaped curve. The curve is initially decreasing as the reorder quantity increases. This is because the ordering cost is decreasing as the reorder quantity increases. However, the curve eventually starts to increase as the reorder quantity increases. This is because the holding cost is increasing as the reorder quantity increases.
+The diagram shows that the total cost curve is a U-shaped curve. The curve is initially concave, meaning that the marginal cost of ordering is decreasing. This is because the cost of ordering a large quantity of inventory is less than the cost of ordering a small quantity of inventory. However, as the quantity of inventory ordered increases, the marginal cost of ordering begins to increase. This is because the cost of holding inventory increases as the quantity of inventory increases.
 
-The optimal reorder quantity is the point where the total cost is at its lowest. This is the point where the ordering cost and the holding cost are equal.
-
-The diagram can be used to determine the optimal reorder quantity for a given set of conditions. The conditions that need to be considered include the ordering cost, the holding cost, and the demand for the inventory.
+The optimal order quantity is the point where the marginal cost of ordering is equal to the marginal cost of holding. This is the point where the total cost is minimized.

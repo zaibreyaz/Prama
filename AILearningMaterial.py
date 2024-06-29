@@ -3,7 +3,7 @@ from LearnWithAIContent.SubjectContent.ContentGeneration import ContentGeneratio
 from LearnWithAIContent.LearnWithTranscript.transcript import Transcript
 from LearnWithAIContent.LearnWithFileUpload.PDFInformation import PDFChat
 from LearnWithAIContent.LearnWithFileUpload.ImageInformation import InformationFromImage
-
+from LearnWithAIContent.Quiz.Quiz import QuizGenerator
 
 topics = """**1. Introduction to Databases:**
 
@@ -40,3 +40,9 @@ image_path = "erq.jpg"
 informationfromImage = InformationFromImage()
 informationfromImage.get_gemini_response(input_text, image_path)
 
+
+context = "Machine Learning"
+number_of_questions = 10
+
+quiz = QuizGenerator(context=context, number_of_questions=number_of_questions)
+quiz.run()
