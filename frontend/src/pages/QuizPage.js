@@ -1,25 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const QuizComponent = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const topic = location.state?.topic || '';
+  
   const [quiz, setQuiz] = useState(null);
   const [answers, setAnswers] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:5000/api/quiz')
-      .then(response => {
-        setQuiz(response.data);
-        setLoading(false);
-      })
-      .catch(error => {
-        setError('Error fetching quiz data');
-        setLoading(false);
-      });
-  }, []);
+    if (topic) {
+      axios.get(`http://127.0.0.1:5000/api/quiz?topic=${topic}`)
+        .then(response => {
+          setQuiz(response.data);
+          setLoading(false);
+        })
+        .catch(error => {
+          setError('Error fetching quiz data');
+          setLoading(false);
+        });
+    } else {
+      setError('Topic not provided');
+      setLoading(false);
+    }
+  }, [topic]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -31,14 +39,19 @@ const QuizComponent = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://127.0.0.1:5000/api/submit', { answers })
-      .then(response => {
-        const { score, total, wrong_answers } = response.data;
-        navigate('/result', { state: { score, total, wrong_answers } });
-      })
-      .catch(error => {
-        setError('Error submitting quiz');
-      });
+    const allAnswered = Object.keys(answers).length === quiz.questions.length;
+    if (allAnswered) {
+      axios.post('http://127.0.0.1:5000/api/submit', { answers })
+        .then(response => {
+          const { score, total, wrong_answers } = response.data;
+          navigate('/result', { state: { score, total, wrong_answers } });
+        })
+        .catch(error => {
+          setError('Error submitting quiz');
+        });
+    } else {
+      setError('Please answer all questions before submitting');
+    }
   };
 
   if (loading) return <div className="text-white">Loading...</div>;

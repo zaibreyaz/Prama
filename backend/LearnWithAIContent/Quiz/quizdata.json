@@ -1,0 +1,117 @@
+{
+  "quiz": {
+    "title": "Machine Learning Quiz",
+    "questions": [
+      {
+        "question": "What is machine learning?",
+        "options": [
+          "A type of artificial intelligence that enables computers to learn from data without being explicitly programmed.",
+          "A programming technique used to create complex algorithms.",
+          "A method for analyzing large datasets.",
+          "A way to improve the performance of computer hardware."
+        ],
+        "correct_answer": "A type of artificial intelligence that enables computers to learn from data without being explicitly programmed.",
+        "explanation": "Machine learning is a subset of AI that focuses on the ability of computers to learn from data and improve their performance over time."
+      },
+      {
+        "question": "Which of the following is NOT a type of machine learning?",
+        "options": [
+          "Supervised learning",
+          "Unsupervised learning",
+          "Reinforcement learning",
+          "Deep learning"
+        ],
+        "correct_answer": "Deep learning",
+        "explanation": "Deep learning is a subfield of machine learning, not a distinct type."
+      },
+      {
+        "question": "What is supervised learning?",
+        "options": [
+          "Training a model on labeled data to predict outcomes.",
+          "Training a model on unlabeled data to identify patterns.",
+          "Training a model through trial and error to optimize performance.",
+          "Training a model using a deep neural network."
+        ],
+        "correct_answer": "Training a model on labeled data to predict outcomes.",
+        "explanation": "Supervised learning involves providing the model with labeled data, allowing it to learn the relationship between inputs and outputs."
+      },
+      {
+        "question": "What is an example of a supervised learning task?",
+        "options": [
+          "Image classification",
+          "Customer segmentation",
+          "Fraud detection",
+          "Spam filtering"
+        ],
+        "correct_answer": "Spam filtering",
+        "explanation": "Spam filtering uses labeled data (spam vs. non-spam emails) to train a model to identify and block spam."
+      },
+      {
+        "question": "What is unsupervised learning?",
+        "options": [
+          "Training a model on labeled data to predict outcomes.",
+          "Training a model on unlabeled data to identify patterns.",
+          "Training a model through trial and error to optimize performance.",
+          "Training a model using a deep neural network."
+        ],
+        "correct_answer": "Training a model on unlabeled data to identify patterns.",
+        "explanation": "Unsupervised learning explores patterns and structures in unlabeled data, without explicit guidance on desired outputs."
+      },
+      {
+        "question": "What is an example of an unsupervised learning task?",
+        "options": [
+          "Image classification",
+          "Customer segmentation",
+          "Fraud detection",
+          "Spam filtering"
+        ],
+        "correct_answer": "Customer segmentation",
+        "explanation": "Customer segmentation groups customers based on similarities in their behaviors and characteristics, without explicit labels."
+      },
+      {
+        "question": "What is reinforcement learning?",
+        "options": [
+          "Training a model by providing feedback on its actions.",
+          "Training a model using labeled data to predict outcomes.",
+          "Training a model on unlabeled data to identify patterns.",
+          "Training a model using a deep neural network."
+        ],
+        "correct_answer": "Training a model by providing feedback on its actions.",
+        "explanation": "Reinforcement learning involves training a model through interactions with an environment, receiving rewards for desired actions."
+      },
+      {
+        "question": "What is an example of a reinforcement learning task?",
+        "options": [
+          "Playing a game",
+          "Image classification",
+          "Customer segmentation",
+          "Fraud detection"
+        ],
+        "correct_answer": "Playing a game",
+        "explanation": "Game AI often uses reinforcement learning to learn strategies and optimize performance through trial and error."
+      },
+      {
+        "question": "What is the difference between machine learning and artificial intelligence?",
+        "options": [
+          "Machine learning is a subset of AI.",
+          "AI is a subset of machine learning.",
+          "Machine learning and AI are the same.",
+          "There is no difference."
+        ],
+        "correct_answer": "Machine learning is a subset of AI.",
+        "explanation": "Machine learning is a specific type of AI that focuses on learning from data. AI encompasses a broader range of techniques for creating intelligent systems."
+      },
+      {
+        "question": "Which of the following is NOT a common application of machine learning?",
+        "options": [
+          "Self-driving cars",
+          "Personalized recommendations",
+          "Medical diagnosis",
+          "Creating new programming languages"
+        ],
+        "correct_answer": "Creating new programming languages",
+        "explanation": "While machine learning is used in various fields, it is not currently used for creating new programming languages."
+      }
+    ]
+  }
+}

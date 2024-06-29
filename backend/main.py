@@ -6,6 +6,9 @@ from LearnWithAIContent.LearnTopic.MaterialGeneration import MaterialGeneration
 from LearnWithAIContent.SubjectContent.ContentGeneration import ContentGeneration
 from LearnWithAIContent.LearnWithTranscript.transcript import Transcript
 from LearnWithAIContent.TextGeneration import TextGenerator
+from LearnWithAIContent.LearnWithFileUpload.PDFInformation import PDFChat
+from LearnWithAIContent.Quiz.Quiz import QuizGenerator
+from LearnWithAIContent.LearnWithFileUpload.ImageInformation import InformationFromImage
 import logging
 import json
 import os
@@ -14,6 +17,8 @@ logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 CORS(app)
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Configuration
 app.config['SECRET_KEY'] = 'your_secret_key'
@@ -130,27 +135,6 @@ def summarize_transcript():
     except Exception as e:
         logging.error(f"Error in /summarize_transcript: {e}")
         return jsonify({"error": str(e)}), 500
-    
-class QuizGenerator:
-    def __init__(self, context, number_of_questions):
-        self.context = context
-        self.number_of_questions = number_of_questions
-
-    def run(self):
-        prompt = f"""Generate a quiz based on the following context: {self.context}. 
-                The quiz should consist of a {self.number_of_questions} set of questions, each with four options. 
-                Provide the output in JSON format,
-                Make sure each question is relevant to the context and the correct answer is accurately indicated. 
-                Here is the context for the quiz:
-                Context: {self.context}"""
-        quiz = TextGenerator(prompt)
-        response = quiz.Text()
-        if "```json" in response:
-            response = response.replace("```json", "")
-        if "```" in response:
-            response = response.replace("```", "")
-        with open("quizdata.json", "w") as f:
-            f.writelines(response)
 
 @app.route('/api/quiz', methods=['GET'])
 def get_quiz():
@@ -159,13 +143,11 @@ def get_quiz():
 
     with open('quizdata.json') as f:
         quiz_data = json.load(f)
-        quiz_title = quiz_data['quiz']['title']
-        quiz_questions = quiz_data['quiz']['questions']
+    
+    quiz_title = quiz_data['quiz']['title']
+    quiz_questions = quiz_data['quiz']['questions']
 
-    return jsonify({
-        'title': quiz_title,
-        'questions': quiz_questions
-    })
+    return jsonify({'title': quiz_title, 'questions': quiz_questions})
 
 @app.route('/api/submit', methods=['POST'])
 def submit_quiz():
@@ -193,6 +175,54 @@ def submit_quiz():
 
     return jsonify({'score': score, 'total': len(quiz_questions), 'wrong_answers': wrong_answers})
 
+UPLOAD_FOLDER = 'uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+class InformationFromImage:
+    def get_gemini_response(self, input_text, image_path):
+        # Placeholder for the actual implementation
+        return f"Information from image for input "
+
+class PDFChat:
+    def PDFInformationRun(self, pdf_docs, user_question):
+        # Placeholder for the actual implementation
+        return f"PDF information for question '{user_question}'"
+
+@app.route('/file-upload', methods=['POST'])
+def upload_file():
+    input_text = request.form['userName']
+    image_file = request.files.get('imageFile')
+    pdf_file = request.files.get('pdfFile')
+
+    if not os.path.exists(UPLOAD_FOLDER):
+        os.makedirs(UPLOAD_FOLDER)
+
+    image_path = None
+    pdf_path = None
+    information = None
+    pdf_information = None
+
+    if image_file:
+        image_path = os.path.join(UPLOAD_FOLDER, image_file.filename)
+        image_file.save(image_path)
+        informationfromImage = InformationFromImage()
+        information = informationfromImage.get_gemini_response(input_text, image_path)
+    
+    if pdf_file:
+        pdf_path = os.path.join(UPLOAD_FOLDER, pdf_file.filename)
+        pdf_file.save(pdf_path)
+        pdfchat = PDFChat()
+        pdf_information = pdfchat.PDFInformationRun(pdf_docs=pdf_path, user_question=input_text)
+
+    result_data = f"Files uploaded successfully for user {input_text}"
+
+    return jsonify({
+        'imagePath': image_path,
+        'pdfPath': pdf_path,
+        'resultData': result_data,
+        'imageInformation': information,
+        'pdfInformation': pdf_information
+    })
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
