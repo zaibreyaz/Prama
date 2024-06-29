@@ -1,64 +1,75 @@
 
-{
-  "header": "Database Management Systems (DBMS)",
-  "subheader": "Introduction",
-  "content": [
-    "What is a database?",
-    "Types of databases (relational, NoSQL, etc.)",
-    "Why use a DBMS?",
-    "Key concepts: data, schema, tables, records, fields, keys"
-  ],
-  "header": "Relational Database Management Systems (RDBMS)",
-  "subheader": "Relational Database Concepts",
-  "content": [
-    "Relational model: tables, relationships, constraints",
-    "Data types: integers, strings, dates, etc.",
-    "Keys: primary keys, foreign keys, candidate keys",
-    "Normalization: reducing data redundancy"
-  ],
-  "subheader": "SQL (Structured Query Language)",
-  "content": [
-    "Basic SQL commands: SELECT, INSERT, UPDATE, DELETE",
-    "Data filtering with WHERE clause",
-    "Sorting data with ORDER BY",
-    "Grouping data with GROUP BY",
-    "Joins: combining data from multiple tables"
-  ],
-  "header": "Database Design",
-  "subheader": "Entity-Relationship (ER) Modeling",
-  "content": [
-    "Entities, attributes, relationships",
-    "Creating ER diagrams",
-    "Translating ER diagrams to database schema"
-  ],
-  "subheader": "Database Normalization",
-  "content": [
-    "Understanding normalization forms (1NF, 2NF, 3NF)",
-    "Benefits of normalization: data integrity, efficiency"
-  ],
-  "header": "Database Administration",
-  "subheader": "Database Security",
-  "content": [
-    "Authentication and authorization",
-    "Data encryption and access control",
-    "Backup and recovery"
-  ],
-  "subheader": "Database Performance Tuning",
-  "content": [
-    "Query optimization",
-    "Indexing",
-    "Data partitioning"
-  ],
-  "header": "Database Applications",
-  "subheader": "Data Warehousing and Business Intelligence",
-  "content": [
-    "Data warehouse concepts",
-    "OLAP (Online Analytical Processing)",
-    "Data mining"
-  ],
-  "subheader": "Web and Mobile Applications",
-  "content": [
-    "Connecting databases to web applications",
-    "Database interactions in mobile apps"
-  ]
-}
+[
+  {
+    "header": "Introduction to Database Management Systems",
+    "subheaders": [
+      "What is a Database?",
+      "Types of Databases (Relational, NoSQL, etc.)",
+      "Why Use a Database?",
+      "Database Management Systems (DBMS)",
+      "Components of a DBMS",
+      "Database Models (Entity-Relationship Model, etc.)"
+    ]
+  },
+  {
+    "header": "Relational Databases",
+    "subheaders": [
+      "Relational Database Concepts",
+      "Tables, Columns, and Rows",
+      "Keys (Primary, Foreign)",
+      "Data Types",
+      "Relationships (One-to-One, One-to-Many, Many-to-Many)",
+      "Data Integrity and Constraints",
+      "Normalization"
+    ]
+  },
+  {
+    "header": "Structured Query Language (SQL)",
+    "subheaders": [
+      "Introduction to SQL",
+      "Data Definition Language (DDL)",
+      "Data Manipulation Language (DML)",
+      "Data Control Language (DCL)",
+      "Basic SQL Commands (SELECT, INSERT, UPDATE, DELETE)",
+      "Joining Tables",
+      "Aggregation Functions",
+      "Subqueries",
+      "Views"
+    ]
+  },
+  {
+    "header": "Database Design",
+    "subheaders": [
+      "Database Design Process",
+      "Entity-Relationship Diagrams (ERDs)",
+      "Normalization and Denormalization",
+      "Data Modeling Techniques"
+    ]
+  },
+  {
+    "header": "Database Administration",
+    "subheaders": [
+      "Database Backup and Recovery",
+      "Security and Access Control",
+      "Performance Tuning",
+      "Monitoring and Troubleshooting"
+    ]
+  },
+  {
+    "header": "Transaction Management",
+    "subheaders": [
+      "Transactions",
+      "ACID Properties (Atomicity, Consistency, Isolation, Durability)",
+      "Concurrency Control",
+      "Locking Mechanisms"
+    ]
+  },
+  {
+    "header": "NoSQL Databases",
+    "subheaders": [
+      "Introduction to NoSQL",
+      "Types of NoSQL Databases (Document, Key-Value, Graph)",
+      "Advantages and Disadvantages of NoSQL"
+    ]
+  }
+]
