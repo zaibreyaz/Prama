@@ -1,0 +1,119 @@
+
+[
+  {
+    "header": "Data Preprocessing",
+    "subheaders": [
+      "Data Cleaning",
+      "Data Transformation",
+      "Feature Selection",
+      "Dimensionality Reduction",
+      "Data Integration"
+    ]
+  },
+  {
+    "header": "Classification",
+    "subheaders": [
+      "Decision Trees",
+      "Support Vector Machines (SVMs)",
+      "Naive Bayes",
+      "K-Nearest Neighbors (KNN)",
+      "Ensemble Methods (Bagging, Boosting)",
+      "Neural Networks",
+      "Deep Learning"
+    ]
+  },
+  {
+    "header": "Clustering",
+    "subheaders": [
+      "K-Means Clustering",
+      "Hierarchical Clustering",
+      "Density-Based Clustering (DBSCAN)",
+      "Model-Based Clustering"
+    ]
+  },
+  {
+    "header": "Association Rule Mining",
+    "subheaders": [
+      "Apriori Algorithm",
+      "FP-Growth Algorithm",
+      "Association Rule Evaluation"
+    ]
+  },
+  {
+    "header": "Regression",
+    "subheaders": [
+      "Linear Regression",
+      "Logistic Regression",
+      "Polynomial Regression",
+      "Support Vector Regression (SVR)",
+      "Decision Tree Regression"
+    ]
+  },
+  {
+    "header": "Anomaly Detection",
+    "subheaders": [
+      "Statistical Methods",
+      "Clustering-Based Methods",
+      "One-Class SVM",
+      "Isolation Forest"
+    ]
+  },
+  {
+    "header": "Text Mining",
+    "subheaders": [
+      "Text Preprocessing",
+      "Sentiment Analysis",
+      "Topic Modeling",
+      "Information Retrieval",
+      "Natural Language Processing (NLP)"
+    ]
+  },
+  {
+    "header": "Social Network Analysis",
+    "subheaders": [
+      "Network Centrality Measures",
+      "Community Detection",
+      "Link Prediction",
+      "Social Influence Analysis"
+    ]
+  },
+  {
+    "header": "Time Series Analysis",
+    "subheaders": [
+      "Time Series Forecasting",
+      "Time Series Decomposition",
+      "ARIMA Models",
+      "RNNs for Time Series"
+    ]
+  },
+  {
+    "header": "Data Mining Algorithms",
+    "subheaders": [
+      "Genetic Algorithms",
+      "Particle Swarm Optimization",
+      "Ant Colony Optimization",
+      "Reinforcement Learning"
+    ]
+  },
+  {
+    "header": "Advanced Data Mining Techniques",
+    "subheaders": [
+      "Big Data Analytics",
+      "Cloud Computing for Data Mining",
+      "Data Visualization",
+      "Data Governance and Privacy"
+    ]
+  },
+  {
+    "header": "Applications of Data Mining",
+    "subheaders": [
+      "Business Intelligence",
+      "Healthcare",
+      "Finance",
+      "Marketing",
+      "Security",
+      "E-commerce",
+      "Social Science"
+    ]
+  }
+]

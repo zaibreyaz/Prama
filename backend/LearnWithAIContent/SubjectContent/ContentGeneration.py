@@ -9,9 +9,12 @@ class ContentGeneration:
         self._level = level
 
     def ContentGenerator(self):
+        
         prompt = f"""List Content of {self._topic} topic for a {self._level},
-                    and format the output in json, and format heading as header and sub heading as subheader,
-                    doesnot include and practical topics and resources, 
+                    and Format the output in JSON as an array of objects,
+                    where each object represents a header with its subheaders,
+                    Each option should be a nested subarray within the header object.
+                    does not include and practical topics and resources, 
                     only return the content not anything else"""
         ai = TextGenerator(prompt)
         try:
@@ -22,7 +25,7 @@ class ContentGeneration:
             if "```" in response:
                 response = response.replace("```","")
             logging.info(f"Received response from AI: {response}")
-            with open("Content1.json", "w") as f:
+            with open("Content3.json", "w") as f:
                 f.writelines(response)
             logging.info("Content generated successfully")
             return response

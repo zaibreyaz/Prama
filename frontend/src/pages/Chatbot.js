@@ -7,9 +7,9 @@ function Chatbot() {
   const [level, setLevel] = useState("");
   const [topics, setTopics] = useState("");
   const [videoLink, setVideoLink] = useState("");
-  const [generatedContent, setGeneratedContent] = useState("");
+
+  const [generatedContent, setGeneratedContent] = useState();
   const [generatedMaterial, setGeneratedMaterial] = useState("");
-  const [summarizedTranscript, setSummarizedTranscript] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -26,11 +26,14 @@ function Chatbot() {
     })
       .then((response) => response.json())
       .then((data) => {
+        const cleanedContent = JSON.parse(data?.generated_content.trim());
+
+        console.log("whrwu", cleanedContent);
         setLoading(false);
-        if (data.error) {
-          setError(data.error);
+        if (cleanedContent.error) {
+          setError(cleanedContent.error);
         } else {
-          setGeneratedContent(data.generated_content);
+          setGeneratedContent(cleanedContent);
         }
       })
       .catch((error) => {
@@ -67,10 +70,11 @@ function Chatbot() {
       });
   };
 
-  const navigate = useNavigate();
-  const navigateToChatBotResults = () => {
-    navigate("/chatbot/results");
-  };
+  // const arr = generatedContent ? JSON.parse(generatedContent) : [];
+  // const navigate = useNavigate();
+  // const navigateToChatBotResults = () => {
+  //   navigate("/chatbot/results");
+  // };
 
   return (
     <section className="p-5 min-h-screen bg-background flex flex-col items-center justify-center">
@@ -143,10 +147,10 @@ function Chatbot() {
           </div>
         </div>
 
-        {loading && <p>Loading...</p>}
+        {loading && <p className="text-white">Loading...</p>}
         {error && <p className="error text-white">{error}</p>}
 
-        <div className=" flex flex-col items-center justify-center w-full px-28">
+        <div className="flex flex-col items-center justify-center w-full px-28">
           <div className="flex flex-col items-center justify-center gap-y-2">
             <h2 className="text-4xl text-primaryText font-montserrat">
               'Input field data' for 'level'
@@ -159,15 +163,31 @@ function Chatbot() {
               gridAutoFlow: "row dense",
             }}
           >
-            <div className="relative  p-8  rounded-lg shadow-lg w-full max-w-md cursor-pointer">
-              <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
-
-              <div className="relative ">
-                <div className="text-white formatted-text">
-                  <ReactMarkdown>{generatedContent}</ReactMarkdown>
+            {generatedContent?.map((content, i) => (
+              <div
+                key={i}
+                className="relative p-8 rounded-lg shadow-lg w-full max-w-md cursor-pointer"
+              >
+                <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
+                <div className="relative">
+                  <div className="text-white">{content.header}</div>
+                </div>
+                <div className="text-white relative">
+                  {console.log(
+                    "Subheaders for",
+                    content.header,
+                    ":",
+                    content.subheaders
+                  )}
+                  {content.subheaders &&
+                    content.subheaders.map((subheader, index) => (
+                      <div key={index} className="text-white">
+                        {subheader}
+                      </div>
+                    ))}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
