@@ -1,0 +1,32 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Environment variables
+.env
+
+# IDE-specific files (if using PyCharm, VSCode, etc.)
+.idea/
+.vscode/
+
+# Miscellaneous
+.DS_Store  # macOS specific
+Thumbs.db  # Windows specific
+
+# Dependencies
+/instance/
+/.pytest_cache/
+/.coverage
+/.pytest_cache
+/.vscode
+/.idea

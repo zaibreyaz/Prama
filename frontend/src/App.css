@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  /* background-color: #ffffff; */
+}
+
+.h-100 {
+  margin-top: 100px;
+}
+
+::-webkit-scrollbar {
+  width: 0.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+
+}

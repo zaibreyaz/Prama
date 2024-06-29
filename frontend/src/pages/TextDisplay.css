@@ -1,0 +1,58 @@
+.container {
+  padding: 20px;
+}
+
+.formatted-text {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  /* color: #818fb4; */
+  /* Set the default text color to gray */
+}
+
+.formatted-text h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+
+  font-weight: bold;
+  text-align: center;
+  color: #af6565;
+  backdrop-filter: blur(10px);
+  background-color: rgba(9, 0, 0, 0.2);
+}
+
+.formatted-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  /* Make the secondary headings semibold */
+  color: #f5e8c7;
+  text-align: center;
+  /* Set the secondary heading color to blue */
+}
+
+.formatted-text p {
+  color: #f5e8c7;
+  margin-bottom: 1em;
+}
+
+.formatted-text ul {
+  color: #818fb4;
+  margin-left: 20px;
+  margin-bottom: 1em;
+}
+
+.formatted-text li {
+  margin-bottom: 0.5em;
+}
+
+.formatted-text pre {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.formatted-text strong {
+  color: #8984c9;
+  font-weight: bold;
+}
