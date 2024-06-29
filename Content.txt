@@ -1,55 +1,70 @@
-## Database Management System (DBMS) for Beginners: 
+## Database Management System - Beginner Content
 
 **1. Introduction to Databases:**
 
 * What is a database?
 * Types of databases (relational, NoSQL, etc.)
-* Why use a database?
-* Benefits of using a DBMS
+* Database management systems (DBMS) - definition and role
+* Importance of databases in today's world
 
-**2. Data Models and Structures:**
+**2. Relational Database Concepts:**
 
-* Entity-Relationship (ER) diagrams
-* Data types (integer, string, date, etc.)
+* Entities and attributes
+* Relationships between entities
 * Keys (primary, foreign)
-* Relationships (one-to-one, one-to-many, many-to-many)
+* Data types and integrity constraints
+* Normalization and database design
 
-**3. Relational Database Concepts:**
+**3. Structured Query Language (SQL):**
 
-* Tables, columns, rows
-* SQL (Structured Query Language)
-* Data Definition Language (DDL): CREATE, ALTER, DROP
-* Data Manipulation Language (DML): INSERT, UPDATE, DELETE, SELECT
-* Data Control Language (DCL): GRANT, REVOKE
+* Basic SQL commands (SELECT, INSERT, UPDATE, DELETE)
+* Data manipulation and retrieval
+* Filtering and sorting data
+* Using JOINs to combine data from multiple tables
 
-**4. Basic SQL Queries:**
+**4. Database Architecture:**
 
-* SELECT statement: retrieving data
-* WHERE clause: filtering data
-* ORDER BY clause: sorting data
-* JOIN operations: combining data from multiple tables
+* Database tiers (presentation, application, data)
+* Database server and client
+* Database schema and tables
+* Data storage and retrieval mechanisms
 
-**5. Database Design and Normalization:**
+**5. Database Security:**
 
-* Designing a relational database schema
-* Normalization principles (1NF, 2NF, 3NF)
-* Avoiding data redundancy and inconsistencies
+* User authentication and authorization
+* Access control and permissions
+* Data encryption and integrity
+* Backup and recovery procedures
 
-**6. Data Integrity and Security:**
+**6. Transaction Management:**
 
-* Constraints (primary key, foreign key, unique, check)
-* Transactions and concurrency control
-* Security measures (user accounts, permissions)
+* ACID properties (atomicity, consistency, isolation, durability)
+* Transaction isolation levels
+* Concurrency control and locking mechanisms
 
-**7. Database Administration:**
+**7. Data Modeling and Design:**
 
-* Backup and recovery
-* Performance tuning
-* Monitoring and maintenance
+* Entity-relationship diagrams (ERDs)
+* Relational database design principles
+* Data warehousing and data mining concepts
 
-**8. Database Trends and Technologies:**
+**8. Database Administration:**
 
-* NoSQL databases
-* Cloud databases
-* Big data and analytics
-* Data warehousing and data mining
+* Database installation and configuration
+* Performance tuning and optimization
+* Backup and recovery procedures
+* Monitoring and troubleshooting
+
+**9. Introduction to NoSQL Databases:**
+
+* Key-value stores
+* Document databases
+* Graph databases
+* Advantages and disadvantages of NoSQL databases
+
+**10. Current Trends in Databases:**
+
+* Cloud databases (AWS, Azure, GCP)
+* Big data and NoSQL databases
+* Data visualization and analytics
+* Artificial intelligence and machine learning in databases

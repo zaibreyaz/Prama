@@ -1,0 +1,11 @@
+The data mining process involves the following steps:
+
+1. **State the problem and formulate the hypothesis:** This step involves defining the problem to be solved and developing a hypothesis about the relationship between variables.
+
+2. **Collect the data:** This step involves gathering the data that will be used for data mining.
+
+3. **Preprocessing the data:** This step involves cleaning and preparing the data for mining.
+
+4. **Estimate the model:** This step involves building a model that can be used to predict the outcome of new data.
+
+5. **Interpret the model and draw conclusions:** This step involves interpreting the model and drawing conclusions about the relationship between variables.

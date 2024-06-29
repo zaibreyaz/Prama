@@ -1,0 +1,9 @@
+ The diagram shows the relationship between the total cost of inventory and the reorder quantity. The total cost is the sum of the ordering cost and the holding cost. The ordering cost is the cost of placing an order, and the holding cost is the cost of storing inventory.
+
+The optimal reorder quantity is the quantity that minimizes the total cost. This is the point where the ordering cost and the holding cost are equal.
+
+The diagram shows that the total cost is a U-shaped curve. The curve is initially decreasing as the reorder quantity increases. This is because the ordering cost is decreasing as the reorder quantity increases. However, the curve eventually starts to increase as the reorder quantity increases. This is because the holding cost is increasing as the reorder quantity increases.
+
+The optimal reorder quantity is the point where the total cost is at its lowest. This is the point where the ordering cost and the holding cost are equal.
+
+The diagram can be used to determine the optimal reorder quantity for a given set of conditions. The conditions that need to be considered include the ordering cost, the holding cost, and the demand for the inventory.
