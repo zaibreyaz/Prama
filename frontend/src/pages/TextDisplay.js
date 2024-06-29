@@ -18,14 +18,22 @@ export default function TextDisplay() {
   }, []);
 
   return (
-    <div className="container bg-background">
-      <div className="row">
+    <section className="px-24 py-5 min-h-screen bg-background w-full flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center gap-y-5">
         <div className="col-12">
-          <ReactMarkdown className="formatted-text ">
+          <ReactMarkdown className="formatted-text text-lg ">
             {textContent}
           </ReactMarkdown>
         </div>
+        <div className="text-center">
+          <button
+            type="button"
+            className="w-full bg-accent text-white p-2 rounded-lg hover:bg-highlight focus:outline-none  focus:ring-highlight font-semibold font-ubuntu"
+          >
+            Quiz Time
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

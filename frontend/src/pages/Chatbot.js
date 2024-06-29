@@ -8,7 +8,7 @@ export default function Chatbot() {
   };
 
   return (
-    <section className="container h-screen bg-background flex flex-col items-center justify-center">
+    <section className="p-5 min-h-screen bg-background flex flex-col items-center justify-center">
       <div className="relative  py-10  rounded-lg shadow-lg w-full max-w-5xl cursor-pointer">
         <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
         <div className="relative flex flex-col items-center justify-center w-full gap-y-10 px-28">

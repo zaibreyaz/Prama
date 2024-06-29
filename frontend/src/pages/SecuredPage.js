@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import axios from 'axios';
-import { IoMdSettings } from "react-icons/io";
 
 export const landingCards = [
   {
@@ -74,7 +73,7 @@ export default function SecuredPage() {
   };
 
   return (
-    <section className="container h-screen bg-background flex flex-col items-center justify-center">
+    <section className="p-5 min-h-screen bg-background flex flex-col items-center justify-center">
       <div className="relative flex flex-col items-center justify-center w-full gap-y-10 px-28">
         <div className="flex flex-col items-center justify-center gap-y-2">
           <h2 className="text-6xl text-primaryText font-montserrat">Pramā</h2>
@@ -89,7 +88,7 @@ export default function SecuredPage() {
           {landingCards.map((card, index) => (
             <div
               key={index}
-              className="bg-background relative rounded-lg shadow-lg p-4 w-full cursor-pointer"
+              className="bg-background relative rounded-lg shadow-lg p-4 w-full cursor-pointer transform transition-transform duration-700 hover:scale-105"
               onClick={index === 0 ? navigateToTextDisplay : null}
             >
               <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
@@ -103,17 +102,6 @@ export default function SecuredPage() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* settings */}
-
-      <div className="absolute bottom-12 lg:bottom-7 right-7 z-40 flex justify-end items-center">
-        <div
-          className={`text-3xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer w-9 h-9 lg:w-12 lg:h-12 `}
-          onClick={toggleSidebar}
-        >
-          <IoMdSettings />
         </div>
       </div>
     </section>

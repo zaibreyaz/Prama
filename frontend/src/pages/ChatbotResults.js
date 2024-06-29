@@ -112,7 +112,7 @@ const ChatbotResults = () => {
   };
 
   return (
-    <section className="container min-h-screen bg-background flex flex-col items-center ">
+    <section className="p-5 min-h-screen bg-background flex flex-col items-center ">
       <div className=" flex flex-col items-center justify-center w-full px-28">
         <div className="flex flex-col items-center justify-center gap-y-2">
           <h2 className="text-4xl text-primaryText font-montserrat">

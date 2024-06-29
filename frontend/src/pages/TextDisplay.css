@@ -3,7 +3,7 @@
 }
 
 .formatted-text {
-  font-family: 'Arial', sans-serif;
+  /* font-family: 'Arial', sans-serif; */
   line-height: 1.6;
   /* color: #818fb4; */
   /* Set the default text color to gray */
@@ -24,19 +24,26 @@
   font-size: 2rem;
   margin-bottom: 0.5em;
   font-weight: 600;
+  margin-bottom: 50px;
+  font-family: "Montserrat", "sans-serif";
   /* Make the secondary headings semibold */
   color: #f5e8c7;
   text-align: center;
+  backdrop-filter: blur(10px);
+  background-color: #818fb45b;
   /* Set the secondary heading color to blue */
 }
 
 .formatted-text p {
   color: #f5e8c7;
+  font-family: "Lato", "sans-serif";
   margin-bottom: 1em;
 }
 
 .formatted-text ul {
-  color: #818fb4;
+  color: #f5e8c7;
+  font-family: "Lato", "sans-serif";
+
   margin-left: 20px;
   margin-bottom: 1em;
 }
