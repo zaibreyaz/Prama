@@ -4,6 +4,7 @@ from LearnWithAIContent.LearnWithTranscript.transcript import Transcript
 from LearnWithAIContent.LearnWithFileUpload.PDFInformation import PDFChat
 from LearnWithAIContent.LearnWithFileUpload.ImageInformation import InformationFromImage
 from LearnWithAIContent.Quiz.Quiz import QuizGenerator
+from LearnWithAIContent.ConvertTextToAudio.TextToAudio import TextAudio
 
 topics = """**1. Introduction to Databases:**
 
@@ -46,3 +47,6 @@ number_of_questions = 10
 
 quiz = QuizGenerator(context=context, number_of_questions=number_of_questions)
 quiz.run()
+
+text = ""
+textaudio = TextAudio(text=text)
