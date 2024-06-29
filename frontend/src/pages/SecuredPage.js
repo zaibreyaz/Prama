@@ -74,7 +74,7 @@ export default function SecuredPage() {
   };
 
   return (
-    <section className="container h-screen bg-background flex flex-col items-center justify-center">
+    <section className="container min-h-screen bg-background flex flex-col items-center justify-center">
       <div className="relative flex flex-col items-center justify-center w-full gap-y-10 px-28">
         <div className="flex flex-col items-center justify-center gap-y-2">
           <h2 className="text-6xl text-primaryText font-montserrat">Pramā</h2>
