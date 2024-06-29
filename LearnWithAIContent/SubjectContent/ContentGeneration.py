@@ -10,12 +10,16 @@ class ContentGeneration:
         self._level = level
 
     def ContentGenerator(self):
-        prompt = f"""List Content of {self._topic} topic for a {self._level}, 
+        prompt = f"""List Content of {self._topic} topic for a {self._level},
+                    and format the output in json, and format heading as header and sub heading as subheader,
                     doesnot include and practical topics and resources, 
                     only return the content not anything else"""
         ai = TextGenerator(prompt)
-        out = ai.Text()
-
-        with open("Content.txt", "w") as f:
-            f.writelines(out)
+        response = ai.Text()
+        if "```json" in response:
+            response = response.replace("```json","")
+        if "```" in response:
+            response = response.replace("```","")
+        with open("Content.json", "w") as f:
+            f.writelines(response)
 
