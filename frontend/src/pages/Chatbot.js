@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
@@ -43,6 +43,11 @@ function Chatbot() {
       });
   };
 
+  const [selectedCard, setSelectedCard] = useState(null);
+  const handleDivClick = (content) => {
+    setSelectedCard(content);
+  };
+
   const handleMaterialSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -52,7 +57,7 @@ function Chatbot() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ topics: topics }),
+      body: JSON.stringify({ topics: selectedCard }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -68,20 +73,18 @@ function Chatbot() {
         setError("An error occurred while generating material.");
         console.error("Error:", error);
       });
+    setTimeout(() => {
+      setGeneratedMaterial(topics); // Assuming the generated material is the topics data
+      setLoading(false);
+    }, 1000);
   };
 
-  // const arr = generatedContent ? JSON.parse(generatedContent) : [];
-  // const navigate = useNavigate();
-  // const navigateToChatBotResults = () => {
-  //   navigate("/chatbot/results");
-  // };
-
   return (
-    <section className="p-5 min-h-screen bg-background flex flex-col items-center justify-center">
+    <section className="p-5 min-h-screen bg-background flex flex-col items-center ">
       <div className="relative  py-10  rounded-lg shadow-lg w-full max-w-5xl cursor-pointer">
-        {/* <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div> */}
+        <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
         <div className="relative flex flex-col items-center justify-center w-full gap-y-10 px-28">
-          <div className="flex flex-col items-center justify-center gap-y-2">
+          <div className="flex relative flex-col items-center justify-center gap-y-5">
             <h2 className="text-6xl text-primaryText font-montserrat">
               Ask Your Chatbot
             </h2>
@@ -93,7 +96,7 @@ function Chatbot() {
         </div>
 
         {/*  */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col relative items-center justify-between mt-5">
           <div>
             <form
               className="flex items-end justify-between gap-x-10"
@@ -153,11 +156,12 @@ function Chatbot() {
         <div className="flex flex-col items-center justify-center w-full px-28">
           <div className="flex flex-col items-center justify-center gap-y-2">
             <h2 className="text-4xl text-primaryText font-montserrat">
-              'Input field data' for 'level'
+              {subject} for {level}
             </h2>
           </div>
+
           <div
-            className="grid grid-cols-4 gap-4 py-5 flex-grow"
+            className="grid grid-cols-3 w-full gap-4 py-5 px-3 flex-grow"
             style={{
               overflowY: "auto",
               gridAutoFlow: "row dense",
@@ -166,19 +170,14 @@ function Chatbot() {
             {generatedContent?.map((content, i) => (
               <div
                 key={i}
-                className="relative p-8 rounded-lg shadow-lg w-full max-w-md cursor-pointer"
+                className="relative p-3 gap-x-4 rounded-lg shadow-lg w-full max-w-2xl cursor-pointer"
+                onClick={() => handleDivClick(content)}
               >
                 <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
                 <div className="relative">
                   <div className="text-white">{content.header}</div>
                 </div>
                 <div className="text-white relative">
-                  {console.log(
-                    "Subheaders for",
-                    content.header,
-                    ":",
-                    content.subheaders
-                  )}
                   {content.subheaders &&
                     content.subheaders.map((subheader, index) => (
                       <div key={index} className="text-white">
@@ -189,12 +188,41 @@ function Chatbot() {
               </div>
             ))}
           </div>
+
+          {selectedCard && (
+            <div className="mt-5 text-white">
+              <form onSubmit={handleMaterialSubmit}>
+                <div>
+                  <label htmlFor="topics">Topics:</label>
+                  <textarea
+                    id="topics"
+                    name="topics"
+                    value={selectedCard}
+                    onChange={(e) => setTopics(e.target.value)}
+                  />
+                </div>
+                <br />
+                <button className="" type="submit">
+                  Generate Material
+                </button>
+              </form>
+              {loading && <p className="text-secondaryText">Loading...</p>}
+              {error && <p className="error text-secondaryText">{error}</p>}
+              <h2 className="text-primaryText text-3xl text-lato">
+                Notes for you:
+              </h2>{" "}
+              <div id="material-output" className="text-secondaryText">
+                {typeof generatedMaterial === "string" && (
+                  <ReactMarkdown>{generatedMaterial}</ReactMarkdown>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
   );
 }
-
 export default Chatbot;
 
 {

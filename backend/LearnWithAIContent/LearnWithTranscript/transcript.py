@@ -1,6 +1,9 @@
 from LearnWithAIContent.TextGeneration import TextGenerator
 from youtube_transcript_api import YouTubeTranscriptApi
 import logging
+import os
+import shutil
+import requests
 
 logging.basicConfig(level=logging.INFO)
 
@@ -13,6 +16,8 @@ class Transcript:
             if "v=" not in youtube_video_url:
                 raise ValueError("Invalid YouTube video link format")
             video_id = youtube_video_url.split("v=")[1]
+            if "&" in video_id:
+                video_id = video_id.split("&")[0]
             transcript_text = YouTubeTranscriptApi.get_transcript(video_id)
             transcript = " ".join([i["text"] for i in transcript_text])
             logging.info("Extracted transcript successfully")
@@ -20,6 +25,19 @@ class Transcript:
         except Exception as e:
             logging.error(f"Error extracting transcript: {e}")
             raise e
+        
+    def empty_directory(self,directory_path):
+        if os.path.exists(directory_path):
+            shutil.rmtree(directory_path)
+        os.mkdirs(directory_path)
+        
+    def save_youtube_tumbnails(self):
+        self.empty_directory("TranscriptImages")
+        for i in range(1,4):
+            img_url = f"http://img.youtube/vi/{self.video_id}/{i}.jpg"
+            img_data = requests.get(img_url).content
+            with open(f"TranscriptImages/{i}.jpg","wb") as handler:
+                handler.write(img_data)
     
     def TranscriptSummarizer(self):
         prompt = """You are a YouTube video summarizer. 
@@ -33,7 +51,7 @@ class Transcript:
             ai = TextGenerator(prompt=(prompt + transcript_text))
             summary = ai.Text()
             logging.info("Received summary from AI successfully")
-            with open("TranscriptSummary.txt", "w") as f:
+            with open("TranscriptSummary2.txt", "w") as f:
                 f.write(summary)
             logging.info("Transcript summary generated successfully")
             return summary

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { IoMdSettings } from "react-icons/io";
-
 export const landingCards = [
   {
     heading: "Ask Your Chatbot",
@@ -73,17 +71,6 @@ export default function LearnWithAiMainPAge() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* settings */}
-
-      <div className="absolute bottom-12 lg:bottom-7 right-7 z-40 flex justify-end items-center">
-        <div
-          className={`text-3xl text-white bg-accent shadow-lg rounded-full flex justify-center items-center cursor-pointer w-9 h-9 lg:w-12 lg:h-12 `}
-          onClick={toggleSidebar}
-        >
-          <IoMdSettings />
         </div>
       </div>
     </section>

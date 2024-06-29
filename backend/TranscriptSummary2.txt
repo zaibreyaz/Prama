@@ -1,0 +1,18 @@
+## MIT 6S191: Introduction to Deep Learning - Lecture 1 Summary
+
+This lecture, delivered by Alexander Amini, lays the foundation for understanding deep learning, a rapidly evolving field revolutionizing various scientific and technological domains. The lecture highlights the rapid advancements in AI and deep learning, emphasizing the importance of learning the underlying principles to be able to adapt to future developments.
+
+**Key Points:**
+
+* **Intelligence and its artificial counterpart:** Intelligence is defined as the ability to process information and make informed decisions. Artificial intelligence (AI) aims to equip computers with this same ability. 
+* **Machine Learning and Deep Learning:** Machine learning is a subset of AI focusing on teaching computers how to process information and make decisions based on data. Deep learning, in turn, is a subset of machine learning that utilizes neural networks to process raw data and make predictions.
+* **The Perceptron: Building block of neural networks:** The perceptron, or single neuron, is the fundamental building block of any neural network. It takes multiple inputs, multiplies them by weights, adds a bias term, and passes the result through a non-linear activation function to produce an output. 
+* **Nonlinearity in activation functions:** Non-linear activation functions are crucial for neural networks to handle complex, non-linear relationships within data. The sigmoid and ReLU functions are popular examples.
+* **Training neural networks:** The process of training a neural network involves finding the optimal set of weights that minimize the difference between predicted outputs and the actual (ground truth) outputs.
+* **Loss functions:** Loss functions quantify the difference between predictions and ground truth. Common examples include the softmax cross-entropy function for binary classification and the mean squared error for real-valued outputs.
+* **Gradient Descent:** Gradient descent is an iterative optimization algorithm used to find the optimal set of weights by computing the gradient of the loss function and taking small steps in the direction that minimizes the loss.
+* **Backpropagation:** Backpropagation is the algorithm for computing the gradients of the loss function with respect to each weight in the neural network. This enables efficient adjustment of weights during training.
+* **Batching data for training:** Batching data is a technique to reduce computational cost during training. Instead of calculating gradients over the entire dataset, it uses smaller subsets (batches) to estimate the gradient, leading to faster and more efficient training.
+* **Overfitting and regularization:** Overfitting occurs when a model learns the nuances of the training data too well and fails to generalize to unseen data. Regularization techniques like dropout and early stopping help prevent overfitting by reducing model complexity and promoting better generalization.
+
+**The lecture concludes with a preview of the next lecture, which will delve into deep sequence modeling using recurrent neural networks (RNNs) and the transformer model.** 

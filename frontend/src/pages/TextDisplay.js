@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-import "./TextDisplay.css";
 
 export default function TextDisplay() {
   const [textContent, setTextContent] = useState("");

@@ -9,13 +9,12 @@ import TextDisplay from "../src/pages/TextDisplay";
 import LoginPage from "../src/pages/LoginPage";
 import SignupPage from "../src/pages/RegisterPage";
 import SecuredPage from "../src/pages/SecuredPage";
-// import LandingPage from "../src/pages/LandingPage";
 import ChatBot from "../src/pages/Chatbot";
 import Video from "../src/pages/Video";
 import FileUpload from "../src/pages/FileUpload";
 import LearnWithAiMainPAge from "./pages/LearnWithAIMainPage";
 import ChatbotResults from "./pages/ChatbotResults";
-
+import Classroom from "./pages/Classroom";
 import "./App.css";
 import Logo from "./Logo";
 import Settings from "./Settings";
@@ -23,7 +22,7 @@ import Settings from "./Settings";
 function App() {
   return (
     <Router>
-      <Logo />
+      {/* <Logo /> */}
       <MainContent />
     </Router>
   );
@@ -40,12 +39,12 @@ function MainContent() {
         {/* <Route path="/" element={<LandingPage />} /> */}
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<SignupPage />} />
-
         <Route path="/secure" element={<SecuredPage />} />
         <Route
           path="Learn-with-ai-main-page"
           element={<LearnWithAiMainPAge />}
         />
+        <Route path="/classroom" element={<Classroom />} />
         <Route path="chatbot" element={<ChatBot />} />
         <Route path="chatbot/results" element={<ChatbotResults />} />
         <Route path="/chatbot/results/text-display" element={<TextDisplay />} />
