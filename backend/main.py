@@ -5,7 +5,10 @@ from flask_cors import CORS
 from LearnWithAIContent.LearnTopic.MaterialGeneration import MaterialGeneration
 from LearnWithAIContent.SubjectContent.ContentGeneration import ContentGeneration
 from LearnWithAIContent.LearnWithTranscript.transcript import Transcript
+from LearnWithAIContent.TextGeneration import TextGenerator
 import logging
+import json
+import os
 
 logging.basicConfig(level=logging.INFO)
 
@@ -127,6 +130,68 @@ def summarize_transcript():
     except Exception as e:
         logging.error(f"Error in /summarize_transcript: {e}")
         return jsonify({"error": str(e)}), 500
+    
+class QuizGenerator:
+    def __init__(self, context, number_of_questions):
+        self.context = context
+        self.number_of_questions = number_of_questions
+
+    def run(self):
+        prompt = f"""Generate a quiz based on the following context: {self.context}. 
+                The quiz should consist of a {self.number_of_questions} set of questions, each with four options. 
+                Provide the output in JSON format,
+                Make sure each question is relevant to the context and the correct answer is accurately indicated. 
+                Here is the context for the quiz:
+                Context: {self.context}"""
+        quiz = TextGenerator(prompt)
+        response = quiz.Text()
+        if "```json" in response:
+            response = response.replace("```json", "")
+        if "```" in response:
+            response = response.replace("```", "")
+        with open("quizdata.json", "w") as f:
+            f.writelines(response)
+
+@app.route('/api/quiz', methods=['GET'])
+def get_quiz():
+    if not os.path.exists('quizdata.json'):
+        return jsonify({'error': 'Quiz data not found'}), 404
+
+    with open('quizdata.json') as f:
+        quiz_data = json.load(f)
+        quiz_title = quiz_data['quiz']['title']
+        quiz_questions = quiz_data['quiz']['questions']
+
+    return jsonify({
+        'title': quiz_title,
+        'questions': quiz_questions
+    })
+
+@app.route('/api/submit', methods=['POST'])
+def submit_quiz():
+    if not os.path.exists('quizdata.json'):
+        return jsonify({'error': 'Quiz data not found'}), 404
+
+    with open('quizdata.json') as f:
+        quiz_data = json.load(f)
+        quiz_questions = quiz_data['quiz']['questions']
+
+    answers = request.json.get('answers', {})
+    score = 0
+    wrong_answers = []
+
+    for i, question in enumerate(quiz_questions):
+        user_answer = answers.get(f'question_{i}')
+        if user_answer != question['correct_answer']:
+            wrong_answers.append({
+                'question': question['question'],
+                'correct_answer': question['correct_answer'],
+                'user_answer': user_answer
+            })
+        else:
+            score += 1
+
+    return jsonify({'score': score, 'total': len(quiz_questions), 'wrong_answers': wrong_answers})
 
 
 if __name__ == '__main__':

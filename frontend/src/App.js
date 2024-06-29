@@ -10,8 +10,12 @@ import Video from "../src/pages/Video";
 import FileUpload from "../src/pages/FileUpload";
 import LearnWithAiMainPAge from "./pages/LearnWithAIMainPage";
 import ChatbotResults from "./pages/ChatbotResults";
+import QuizStart from "../src/pages/QuizStart"
+import ResultComponent from "./pages/QuizResult";
+
 
 import "./App.css";
+import QuizComponent from "./pages/QuizPage";
 
 function App() {
   return (
@@ -30,6 +34,9 @@ function App() {
         <Route path="chatbot/results" element={<ChatbotResults />} />
         <Route path="video" element={<Video />} />
         <Route path="file-upload" element={<FileUpload />} />
+        <Route path="quiz-start" element={<QuizStart/>}/>
+        <Route path="quiz" element={<QuizComponent/>}/>
+        <Route path="/result" element={<ResultComponent />} />
       </Routes>
     </Router>
   );
