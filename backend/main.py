@@ -105,8 +105,8 @@ def generate_content():
         
         content = ContentGeneration(subject, level)
         generated_content = content.ContentGenerator()
-        
         return jsonify({"generated_content": generated_content})
+    
     except Exception as e:
         logging.error(f"Error in /generate_content: {e}")
         return jsonify({"error": str(e)}), 500
