@@ -14,7 +14,7 @@ Pramā is a comprehensive learning management system (LMS) that leverages artifi
 
 1. *Clone the Repository:*
    ```
-    sh
+   
     git clone https://github.com/zaibreyaz/Prama.git
     cd Prama
     ```
@@ -22,7 +22,6 @@ Pramā is a comprehensive learning management system (LMS) that leverages artifi
 3. *Install Dependencies:*
     Ensure you have Python 3.8+ installed. Then, install the required Python packages:
    ```
-    sh
     pip install -r requirements.txt
    ```
     
@@ -37,7 +36,6 @@ Pramā is a comprehensive learning management system (LMS) that leverages artifi
 6. *Start the Development Server:*
     Launch the development server:
    ```
-    sh
     python backend/main.py
    ```
     
