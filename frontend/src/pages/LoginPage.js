@@ -37,24 +37,26 @@ export default function LoginPage() {
     <section className="min-h-screen flex items-center justify-center bg-background">
       <div className="flex flex-col items-center justify-center gap-y-4 px-10">
         <div className=" flex flex-col items-center justify-center gap-y-2">
-          <h2 className="text-4xl text-primaryText font-montserrat">Pramā</h2>
-          <p className="text-center text-secondaryText">
+          <h2 className="text-5xl text-primaryText font-montserrat mb-5">
+            Pramā
+          </h2>
+          <p className="text-center text-secondaryText ">
             “Education is the most powerful weapon which you can use <br /> to
             change the world.” -- <em> Dr. APJ Abdul Kalam</em>
           </p>
         </div>
 
-        <div className="relative  p-8 rounded-lg shadow-lg w-full max-w-md">
+        <div className="relative  p-3 px-5 rounded-lg shadow-lg w-full max-w-xl">
           <div className="absolute inset-0 backdrop-blur-xl bg-white/10 shadow-lg shadow-accent rounded-lg"></div>
           <div className="relative">
-            <h2 className=" text-primaryText text-center  text-3xl font-montserrat">
+            <h2 className=" text-primaryText text-center  text-4xl font-montserrat mb-4">
               Log In
             </h2>
             <form>
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block text-secondaryText mb-2"
+                  className="block text-lg text-secondaryText mb-2"
                 >
                   Email address
                 </label>
@@ -63,14 +65,14 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   id="email"
-                  className="w-full px-4 py-2 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-highlight text-primaryText"
+                  className="w-full text-lg px-4 py-2 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-highlight text-primaryText"
                   placeholder="Enter a valid email address"
                 />
               </div>
               <div className="mb-4">
                 <label
                   htmlFor="password"
-                  className="block text-secondaryText mb-2"
+                  className="block text-lg text-secondaryText mb-2"
                 >
                   Password
                 </label>
@@ -79,7 +81,7 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   id="password"
-                  className="w-full px-4 py-2 border rounded-lg text-primaryText focus:outline-none focus:ring-2 bg-background focus:ring-highlight"
+                  className="w-full text-lg px-4 py-2 border rounded-lg text-primaryText focus:outline-none focus:ring-2 bg-background focus:ring-highlight"
                   placeholder="Enter password"
                 />
               </div>

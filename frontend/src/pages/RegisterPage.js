@@ -17,7 +17,7 @@ export default function RegisterPage() {
       })
       .then(function (response) {
         console.log(response);
-        navigate("/login");
+        navigate("/");
       })
       .catch(function (error) {
         console.log(error, "error");
@@ -106,7 +106,7 @@ export default function RegisterPage() {
               </div>
               <p className="mt-4 text-center text-secondaryText">
                 Already have an account?{" "}
-                <a href="/login" className="text-blue-500 hover:underline">
+                <a href="/" className="text-blue-500 hover:underline">
                   Login
                 </a>
               </p>
