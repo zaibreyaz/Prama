@@ -55,7 +55,7 @@ Pramā is a comprehensive learning management system (LMS) that leverages artifi
     ```
 
 11. *Access Prama:*
-    Open your web browser and go to http://localhost:5000 to start using Prama.
+    Open your web browser and go to ``` http://localhost:5000 ``` to start using Prama.
 
 ## Usage
 
