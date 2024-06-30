@@ -1,5 +1,5 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ResultComponent = () => {
   const location = useLocation();
@@ -7,11 +7,11 @@ const ResultComponent = () => {
   const { score, total, wrong_answers } = location.state;
 
   const handleRetakeQuiz = () => {
-    navigate('/quiz');
+    navigate("/quiz");
   };
 
   const handleGoHome = () => {
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -19,11 +19,14 @@ const ResultComponent = () => {
       <div className="max-w-2xl w-full p-6 bg-gray-800 rounded-lg shadow-lg">
         <h1 className="text-3xl font-bold mb-6 text-center">Quiz Result</h1>
         <p className="text-lg text-center mb-6">
-          Your score is <span className="text-blue-400 font-bold">{score}</span> out of <span className="text-blue-400 font-bold">{total}</span>
+          Your score is <span className="text-blue-400 font-bold">{score}</span>{" "}
+          out of <span className="text-blue-400 font-bold">{total}</span>
         </p>
         {wrong_answers.length > 0 && (
           <div>
-            <h2 className="text-2xl font-semibold mb-4 text-center">Areas to Improve:</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              Areas to Improve:
+            </h2>
             <ul className="list-disc pl-5 space-y-4">
               {wrong_answers.map((item, idx) => (
                 <li key={idx} className="mb-4">

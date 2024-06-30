@@ -28,7 +28,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      {/* <Logo /> */}
+      <Logo />
       <MainContent />
     </Router>
   );

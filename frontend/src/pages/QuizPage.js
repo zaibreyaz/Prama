@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const QuizComponent = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const topic = location.state?.topic || '';
-  
+  const topic = location.state?.topic || "";
+
   const [quiz, setQuiz] = useState(null);
   const [answers, setAnswers] = useState({});
   const [loading, setLoading] = useState(true);
@@ -14,17 +14,18 @@ const QuizComponent = () => {
 
   useEffect(() => {
     if (topic) {
-      axios.get(`http://127.0.0.1:5000/api/quiz?topic=${topic}`)
-        .then(response => {
+      axios
+        .get(`http://127.0.0.1:5000/api/quiz?topic=${topic}`)
+        .then((response) => {
           setQuiz(response.data);
           setLoading(false);
         })
-        .catch(error => {
-          setError('Error fetching quiz data');
+        .catch((error) => {
+          setError("Error fetching quiz data");
           setLoading(false);
         });
     } else {
-      setError('Topic not provided');
+      setError("Topic not provided");
       setLoading(false);
     }
   }, [topic]);
@@ -41,16 +42,17 @@ const QuizComponent = () => {
     event.preventDefault();
     const allAnswered = Object.keys(answers).length === quiz.questions.length;
     if (allAnswered) {
-      axios.post('http://127.0.0.1:5000/api/submit', { answers })
-        .then(response => {
+      axios
+        .post("http://127.0.0.1:5000/api/submit", { answers })
+        .then((response) => {
           const { score, total, wrong_answers } = response.data;
-          navigate('/result', { state: { score, total, wrong_answers } });
+          navigate("/result", { state: { score, total, wrong_answers } });
         })
-        .catch(error => {
-          setError('Error submitting quiz');
+        .catch((error) => {
+          setError("Error submitting quiz");
         });
     } else {
-      setError('Please answer all questions before submitting');
+      setError("Please answer all questions before submitting");
     }
   };
 
