@@ -13,42 +13,50 @@ Pramā is a comprehensive learning management system (LMS) that leverages artifi
 ## Setup Instructions
 
 1. *Clone the Repository:*
+   ```
     sh
     git clone https://github.com/zaibreyaz/Prama.git
     cd Prama
-    
+    ```
 
-2. *Install Dependencies:*
+3. *Install Dependencies:*
     Ensure you have Python 3.8+ installed. Then, install the required Python packages:
+   ```
     sh
     pip install -r requirements.txt
+   ```
     
 
-3. *Environment Variables:*
-    Create a .env file in the root directory and add the following environment variables:
-    
+5. *Environment Variables:*
+    Create a ```.env``` file in the root directory and add the following environment variables:
+    ```
     GOOGLE_API_KEY = "your_api_key"
+    ```
     
 
 6. *Start the Development Server:*
     Launch the development server:
+   ```
     sh
-    python backend/main.py 
+    python backend/main.py
+   ```
     
-7. *Go to frontend side:*
-    cd
-    cd frontend 
+8. *Go to frontend side:*
+    ```
+    cd frontend
+    ```
     
-8. *Install all dependencies:*
-    cd
+9. *Install all dependencies:*
+    ```
    npm i
+    ```
     
-9. *Start your frontend:*
-    
+10. *Start your frontend:*
+    ```
     npm start
-    
+    ```
 
-10. *Access Prama:*
+11. *Access Prama:*
     Open your web browser and go to http://localhost:5000 to start using Prama.
 
 ## Usage
