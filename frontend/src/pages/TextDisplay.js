@@ -7,7 +7,7 @@ export default function TextDisplay() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5001/get-text")
+      .get("http://127.0.0.1:5000/get-text")
       .then((response) => {
         setTextContent(response.data.content);
       })

@@ -14,7 +14,7 @@ export default function LoginPage() {
       alert("Password has left Blank!");
     } else {
       axios
-        .post("http://127.0.0.1:5001/login", {
+        .post("http://127.0.0.1:5000/login", {
           email: email,
           password: password,
         })
