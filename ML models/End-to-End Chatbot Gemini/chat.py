@@ -29,7 +29,7 @@ def get_gemini_response(question):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Q&A Demo")
+st.set_page_config(page_title="Q&A")
 
 st.header("Gemini Application")
 
